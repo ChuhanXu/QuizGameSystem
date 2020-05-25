@@ -1,0 +1,69 @@
+import { Routes } from '@angular/router';
+
+import { ButtonsComponent } from './buttons/buttons.component';
+import { GridSystemComponent } from './grid/grid.component';
+import { IconsComponent } from './icons/icons.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { PanelsComponent } from './panels/panels.component';
+import { SweetAlertComponent } from './sweetalert/sweetalert.component';
+import { TypographyComponent } from './typography/typography.component';
+import { FinishComponent } from './finish/finish.component';
+import { QuizSecondComponent } from './quizsecond/quiz2';
+
+
+export const ComponentsRoutes: Routes = [{
+    path: '',
+    children: [{
+        path: 'buttons',
+        component: ButtonsComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'grid',
+        component: GridSystemComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'icons',
+        component: IconsComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'notifications',
+        component: NotificationsComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'panels',
+        component: PanelsComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'sweet-alert',
+        component: SweetAlertComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'typography',
+        component: TypographyComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'finish-quiz',
+        component: FinishComponent
+    }]
+}, {
+    path: '',
+    children: [{
+        path: 'second-quiz',
+        component: QuizSecondComponent
+    }]
+}
+];

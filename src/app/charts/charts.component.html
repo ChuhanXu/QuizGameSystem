@@ -1,0 +1,68 @@
+<div class="main-content">
+  <h3>Behaviours</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-title">My Quiz Scores</h5>
+          <!-- <p class="card-category">Line Chart</p> -->
+        </div>
+        <div class="card-body">
+          <canvas id="activeUsers"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-title">Average Scores for Teammates</h5>
+          <!-- <p class="card-category">Bar Chart</p> -->
+        </div>
+        <div class="card-body">
+          <canvas id="chartViews"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card-body">
+      <div class="table-responsive">
+        <h3>Quiz History</h3>
+        <h5>Click quiz id or topic to see detailed leaderboard</h5>
+        <table class="table">
+          <thead class="">
+            <th>
+              Quiz ID
+            </th>
+            <th>
+              Topic
+            </th>
+            <th>
+              Score
+            </th>
+            <th class="text-right">
+              Take Time
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dataRows">
+              <td >
+                <a [routerLink]="['/charts/id',{id:item[0]}]" routerLinkActive="router-link-active" >{{item[0]}}</a>
+              </td>
+              <td>
+                <a [routerLink]="['/charts/topic',{topic:item[1]}]" routerLinkActive="router-link-active" >{{item[1]}}</a>
+              </td>
+              <td>
+                {{item[2]}}
+              </td>
+              <td class="text-right">
+                {{item[3]}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
